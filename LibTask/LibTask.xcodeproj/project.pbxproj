@@ -20,6 +20,10 @@
 		93577593273AC07500484FAB /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93577592273AC07500484FAB /* HomeTableViewController.swift */; };
 		9357759B273AC15800484FAB /* TaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357759A273AC15800484FAB /* TaskTableViewController.swift */; };
 		935775A0273AC1A300484FAB /* DetailsTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357759F273AC1A300484FAB /* DetailsTaskViewController.swift */; };
+		935775A5273AC5C400484FAB /* TaskUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935775A4273AC5C400484FAB /* TaskUser.swift */; };
+		935775AA273AC63B00484FAB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935775A9273AC63B00484FAB /* User.swift */; };
+		935775AF273ACDE100484FAB /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935775AE273ACDE100484FAB /* UserTableViewCell.swift */; };
+		935775B7273AD93800484FAB /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935775B6273AD93800484FAB /* TaskTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,10 @@
 		93577592273AC07500484FAB /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		9357759A273AC15800484FAB /* TaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewController.swift; sourceTree = "<group>"; };
 		9357759F273AC1A300484FAB /* DetailsTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsTaskViewController.swift; sourceTree = "<group>"; };
+		935775A4273AC5C400484FAB /* TaskUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskUser.swift; sourceTree = "<group>"; };
+		935775A9273AC63B00484FAB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		935775AE273ACDE100484FAB /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		935775B6273AD93800484FAB /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +159,8 @@
 		9357756E273ABC2F00484FAB /* Model  */ = {
 			isa = PBXGroup;
 			children = (
+				935775A4273AC5C400484FAB /* TaskUser.swift */,
+				935775A9273AC63B00484FAB /* User.swift */,
 			);
 			path = "Model ";
 			sourceTree = "<group>";
@@ -160,6 +170,8 @@
 			children = (
 				93577540273ABBC500484FAB /* Main.storyboard */,
 				93577545273ABBC700484FAB /* LaunchScreen.storyboard */,
+				935775AE273ACDE100484FAB /* UserTableViewCell.swift */,
+				935775B6273AD93800484FAB /* TaskTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -307,11 +319,15 @@
 			files = (
 				9357753B273ABBC500484FAB /* AppDelegate.swift in Sources */,
 				93577583273ABF9B00484FAB /* AddUserViewController.swift in Sources */,
+				935775AF273ACDE100484FAB /* UserTableViewCell.swift in Sources */,
 				935775A0273AC1A300484FAB /* DetailsTaskViewController.swift in Sources */,
 				9357753D273ABBC500484FAB /* SceneDelegate.swift in Sources */,
 				9357757B273ABE1500484FAB /* ConnexionViewController.swift in Sources */,
 				9357758B273ABFE600484FAB /* AddTaskViewController.swift in Sources */,
 				9357759B273AC15800484FAB /* TaskTableViewController.swift in Sources */,
+				935775B7273AD93800484FAB /* TaskTableViewCell.swift in Sources */,
+				935775A5273AC5C400484FAB /* TaskUser.swift in Sources */,
+				935775AA273AC63B00484FAB /* User.swift in Sources */,
 				93577593273AC07500484FAB /* HomeTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
