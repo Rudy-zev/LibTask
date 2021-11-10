@@ -9,6 +9,11 @@ import UIKit
 
 class HomeTableViewController: UITableViewController {
     var userSelected: User?
+    
+    @IBOutlet weak var addUserButton: UIBarButtonItem!
+    @IBOutlet weak var addTaskButton: UIBarButtonItem!
+    
+    //TODO Remplacer par donner de la bdd 
     let user: [User] = [User(firstName: "rudy", lastName: "geoffray" ,admin: false), User(firstName: "paul", lastName: "distil" ,admin: false)]
         
     
@@ -37,3 +42,4 @@ class HomeTableViewController: UITableViewController {
         detailVC.user = userSelected
     }
 }
+

@@ -20,6 +20,15 @@ class DetailsTaskViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        descriptionTaskLabel.text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad "
+       configureTask()
+    }
+    
+    private func configureTask() {
+        titleTask.text = task.title
+        userTask.text = task.user
+        //TODO Changer de format les date
+        startingDate.text = "27/01/2021"
+        endingDate.text = "28/01/2021"
+        descriptionTaskLabel.text = task.description
     }
 }

@@ -10,7 +10,8 @@ import UIKit
 class TaskTableViewController: UITableViewController {
     var user: User!
     var taskSelected: TaskUser?
-    var task = [TaskUser(title: "test 1"), TaskUser(title: "test 2"), TaskUser(title: "test 3")]
+    //TODO Remplacer par donner de la bdd 
+    var task = [TaskUser(title: "test 1"), TaskUser(title: "test 2"), TaskUser(title: "test 3"), TaskUser(title: "Test 4", description: "le test de detail", user: "rudy", startingDate: Date(), endingDate: Date())]
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return task.count

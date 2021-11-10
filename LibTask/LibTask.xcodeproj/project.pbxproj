@@ -24,6 +24,7 @@
 		935775AA273AC63B00484FAB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935775A9273AC63B00484FAB /* User.swift */; };
 		935775AF273ACDE100484FAB /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935775AE273ACDE100484FAB /* UserTableViewCell.swift */; };
 		935775B7273AD93800484FAB /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935775B6273AD93800484FAB /* TaskTableViewCell.swift */; };
+		938C7AB7273BED6C001413F9 /* SendAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938C7AB6273BED6C001413F9 /* SendAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		935775A9273AC63B00484FAB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		935775AE273ACDE100484FAB /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		935775B6273AD93800484FAB /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		938C7AB6273BED6C001413F9 /* SendAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendAlert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 				93577592273AC07500484FAB /* HomeTableViewController.swift */,
 				9357759A273AC15800484FAB /* TaskTableViewController.swift */,
 				9357759F273AC1A300484FAB /* DetailsTaskViewController.swift */,
+				938C7AB6273BED6C001413F9 /* SendAlert.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				9357753B273ABBC500484FAB /* AppDelegate.swift in Sources */,
 				93577583273ABF9B00484FAB /* AddUserViewController.swift in Sources */,
 				935775AF273ACDE100484FAB /* UserTableViewCell.swift in Sources */,
+				938C7AB7273BED6C001413F9 /* SendAlert.swift in Sources */,
 				935775A0273AC1A300484FAB /* DetailsTaskViewController.swift in Sources */,
 				9357753D273ABBC500484FAB /* SceneDelegate.swift in Sources */,
 				9357757B273ABE1500484FAB /* ConnexionViewController.swift in Sources */,
