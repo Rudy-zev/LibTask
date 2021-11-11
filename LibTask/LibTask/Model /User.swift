@@ -7,10 +7,28 @@
 
 import Foundation
 
-struct User {
-    var firstName: String
-    var lastName: String
+struct UserSession: Decodable {
+    var admin: String
+    var username: String
+}
+
+struct User: Decodable {
+    var id: String
+    var firstname: String
+    var lastname: String
+    var birthdate: String?
     var username: String?
     var password: String?
-    var admin: Bool
+    
+    private func creatUserName(firstName: String, lastName: String) -> String {
+        var userName: String = ""
+        
+        return userName
+    }
+    
+    private func creatPassword(firstName: String, lastName: String, birthDate: String) -> String {
+        var password: String = ""
+        
+        return password
+    }
 }

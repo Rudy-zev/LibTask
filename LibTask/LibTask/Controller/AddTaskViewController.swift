@@ -9,7 +9,7 @@ import UIKit
 
 class AddTaskViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     //TODO Remplacer par donner de la bdd 
-    let user: [User] = [User(firstName: "rudy", lastName: "geoffray" ,admin: false), User(firstName: "paul", lastName: "distil" ,admin: false)]
+    let user: [User] = [User(id: "0",firstname: "rudy", lastname: "geoffray" ), User(id: "1", firstname: "paul", lastname: "distil")]
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -20,7 +20,7 @@ class AddTaskViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return user[row].firstName
+        return user[row].firstname
     }
     
     

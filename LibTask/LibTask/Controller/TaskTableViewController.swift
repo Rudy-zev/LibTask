@@ -11,10 +11,10 @@ class TaskTableViewController: UITableViewController {
     var user: User!
     var taskSelected: TaskUser?
     //TODO Remplacer par donner de la bdd 
-    var task = [TaskUser(title: "test 1"), TaskUser(title: "test 2"), TaskUser(title: "test 3"), TaskUser(title: "Test 4", description: "le test de detail", user: "rudy", startingDate: Date(), endingDate: Date())]
+    var task: [TaskUser]?
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return task.count
+        return task!.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -22,13 +22,13 @@ class TaskTableViewController: UITableViewController {
             return UITableViewCell()
         }
         
-        cell.titleTaskLabel.text = task[indexPath.row].title
+        cell.titleTaskLabel.text = task![indexPath.row].title
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        taskSelected = task[indexPath.row]
+        taskSelected = task![indexPath.row]
         
         performSegue(withIdentifier: "detailTaskSegue", sender: self)
     }

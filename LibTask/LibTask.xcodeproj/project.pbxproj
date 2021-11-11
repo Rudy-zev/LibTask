@@ -25,6 +25,9 @@
 		935775AF273ACDE100484FAB /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935775AE273ACDE100484FAB /* UserTableViewCell.swift */; };
 		935775B7273AD93800484FAB /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935775B6273AD93800484FAB /* TaskTableViewCell.swift */; };
 		938C7AB7273BED6C001413F9 /* SendAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938C7AB6273BED6C001413F9 /* SendAlert.swift */; };
+		93C6BFC0273C61ED00AC5B2B /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C6BFBF273C61ED00AC5B2B /* Login.swift */; };
+		93C6BFD2273C7BF300AC5B2B /* TaskService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C6BFD1273C7BF300AC5B2B /* TaskService.swift */; };
+		93C6BFE0273C7C2400AC5B2B /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C6BFDF273C7C2400AC5B2B /* UserService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,9 @@
 		935775AE273ACDE100484FAB /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		935775B6273AD93800484FAB /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		938C7AB6273BED6C001413F9 /* SendAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendAlert.swift; sourceTree = "<group>"; };
+		93C6BFBF273C61ED00AC5B2B /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		93C6BFD1273C7BF300AC5B2B /* TaskService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskService.swift; sourceTree = "<group>"; };
+		93C6BFDF273C7C2400AC5B2B /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,7 @@
 		93577539273ABBC500484FAB /* LibTask */ = {
 			isa = PBXGroup;
 			children = (
+				93C6BFB4273C563E00AC5B2B /* Service */,
 				9357756E273ABC2F00484FAB /* Model  */,
 				9357756F273ABC3800484FAB /* View */,
 				9357756D273ABC2400484FAB /* Controller */,
@@ -164,6 +171,7 @@
 			children = (
 				935775A4273AC5C400484FAB /* TaskUser.swift */,
 				935775A9273AC63B00484FAB /* User.swift */,
+				93C6BFBF273C61ED00AC5B2B /* Login.swift */,
 			);
 			path = "Model ";
 			sourceTree = "<group>";
@@ -188,6 +196,15 @@
 				93577548273ABBC700484FAB /* Info.plist */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		93C6BFB4273C563E00AC5B2B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				93C6BFD1273C7BF300AC5B2B /* TaskService.swift */,
+				93C6BFDF273C7C2400AC5B2B /* UserService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,10 +337,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93C6BFD2273C7BF300AC5B2B /* TaskService.swift in Sources */,
 				9357753B273ABBC500484FAB /* AppDelegate.swift in Sources */,
 				93577583273ABF9B00484FAB /* AddUserViewController.swift in Sources */,
 				935775AF273ACDE100484FAB /* UserTableViewCell.swift in Sources */,
 				938C7AB7273BED6C001413F9 /* SendAlert.swift in Sources */,
+				93C6BFE0273C7C2400AC5B2B /* UserService.swift in Sources */,
 				935775A0273AC1A300484FAB /* DetailsTaskViewController.swift in Sources */,
 				9357753D273ABBC500484FAB /* SceneDelegate.swift in Sources */,
 				9357757B273ABE1500484FAB /* ConnexionViewController.swift in Sources */,
@@ -333,6 +352,7 @@
 				935775A5273AC5C400484FAB /* TaskUser.swift in Sources */,
 				935775AA273AC63B00484FAB /* User.swift in Sources */,
 				93577593273AC07500484FAB /* HomeTableViewController.swift in Sources */,
+				93C6BFC0273C61ED00AC5B2B /* Login.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

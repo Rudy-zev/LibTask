@@ -7,10 +7,11 @@
 
 import Foundation
 
-struct TaskUser {
+struct TaskUser: Decodable {
     var title: String
-    var description: String?
-    var user: String?
+    var description: String
+    var user: String
     var startingDate: Date?
     var endingDate: Date?
 }
+

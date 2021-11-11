@@ -8,10 +8,13 @@
 import UIKit
 
 class SendAlert {
-    static func presentAlertError(errorMessage: String, uiViewController : UIViewController) {
-        let alertVC = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .alert)
-        alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-        uiViewController.present(alertVC, animated: true, completion: nil)
+    func alert(message: String) -> UIAlertController {
+        let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        
+        alert.addAction(action)
+        
+        return alert
     }
 }
-
