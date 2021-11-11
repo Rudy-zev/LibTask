@@ -24,6 +24,8 @@ class ConnexionViewController : UIViewController {
         login()
     }
     
+    
+    //Allows to launch the request to check if the user exists
     func login() {
         guard (userNameTextField.text != "" || passwordTextField.text != "") else {
             self.present(sendAlert.alert(message: "Information manquante."), animated: true)
@@ -53,6 +55,7 @@ class ConnexionViewController : UIViewController {
         }
     }
     
+    //Allows to launch the request to retrieve all non-admin users
     func getAllUser() {
         userService.getAllUser { (sucess, allUser) in
             DispatchQueue.main.async {

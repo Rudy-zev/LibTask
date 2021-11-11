@@ -41,6 +41,7 @@ class HomeTableViewController: UITableViewController {
         performSegue(withIdentifier: "addTaskSegue", sender: self)
     }
     
+    //Allows to launch the request to retrieve all task
     func getAllTask(idUser: String) {
         let parameters = ["iduser": idUser]
         

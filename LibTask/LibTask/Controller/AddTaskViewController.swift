@@ -36,6 +36,7 @@ class AddTaskViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         
     }
     
+    //Allows to create a task
     func requestCreationTask() {
         let parameters = ["iduser": idUserSelected!, "title": titleTextField.text!, "description": descriptionTextField.text!]
         

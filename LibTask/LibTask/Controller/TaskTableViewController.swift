@@ -10,7 +10,7 @@ import UIKit
 class TaskTableViewController: UITableViewController {
     var user: User!
     var taskSelected: TaskUser?
-    //TODO Remplacer par donner de la bdd 
+    
     var task: [TaskUser]?
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

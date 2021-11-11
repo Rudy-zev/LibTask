@@ -27,6 +27,7 @@ class AddUserViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    //Allows to create a user
     func requestCreationUser() {
         let parameters = ["firstname": firstNameTextField.text!, "lastname": lastNametextField.text!, "username": firstNameTextField.text!+lastNametextField.text!, "password": birthDateTextField.text!, "admin": "0"]
         
