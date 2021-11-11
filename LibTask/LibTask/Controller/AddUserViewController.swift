@@ -14,12 +14,22 @@ class AddUserViewController: UIViewController {
     
     let sendAlert = SendAlert()
     
+    var userService = UserService(userSession: URLSession(configuration: .default))
+    
     @IBAction func creatUser(_ sender: Any) {
-        if lastNametextField.text == "" || firstNameTextField.text == "" {
-            sendAlert.alert(message: "Information manquante.")
-        } else {
+        guard lastNametextField.text! != "" && firstNameTextField.text! != "" && birthDateTextField.text! != "" else {
+            self.present(self.sendAlert.alert(message: "Données manquantes."), animated: true)
+            return
         }
+        requestCreationUser()
         
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func requestCreationUser() {
+        let parameters = ["firstname": firstNameTextField.text!, "lastname": lastNametextField.text!, "username": firstNameTextField.text!+lastNametextField.text!, "password": birthDateTextField.text!, "admin": "0"]
         
+        userService.addUser(parameters: parameters)
     }
 }

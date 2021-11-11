@@ -65,4 +65,32 @@ class TaskService {
             callback(false, nil)
         }
     }
+    
+    func addTask(parameters: [String: Any]) {
+        if let url = URL(string: "http://localhost:8888/LibTaskWebServices/addTask.php") {
+            var request = URLRequest(url: url)
+            
+            var components = URLComponents()
+            
+            var queryItems = [URLQueryItem]()
+            
+            for (key, value) in parameters {
+                let queryItem = URLQueryItem(name: key, value: String(describing: value))
+                queryItems.append(queryItem)
+            }
+            
+            components.queryItems = queryItems
+            
+            let queryItemData = components.query?.data(using: .utf8)
+            
+            request.httpBody = queryItemData
+            request.httpMethod = "POST"
+            request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+            
+            task?.cancel()
+            
+            task = taskSession.dataTask(with: request)
+            task?.resume()
+        }
+    }
 }

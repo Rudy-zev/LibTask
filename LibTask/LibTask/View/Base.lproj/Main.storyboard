@@ -457,7 +457,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AWr-B1-y58">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AWr-B1-y58">
                                         <rect key="frame" x="0.0" y="103.5" width="414" height="460.5"/>
                                         <color key="backgroundColor" red="0.53214401010000001" green="0.90010482069999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -492,6 +492,9 @@
                                         <state key="normal" title="Créer ">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="tapCreationTaskButton:" destination="YDi-CD-keQ" eventType="touchUpInside" id="VBG-Jd-EWE"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -506,6 +509,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Yoj-He-CFG"/>
+                    <connections>
+                        <outlet property="descriptionTextField" destination="AWr-B1-y58" id="n3E-Pb-iag"/>
+                        <outlet property="titleTextField" destination="KM4-Xe-VkN" id="3xt-Yr-zzl"/>
+                        <outlet property="userPickerView" destination="dxR-u6-67P" id="AdX-9X-nV1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kfc-Hb-zZS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -20,6 +20,7 @@ class UserService {
     
     func checkLogin(parameters: [String: Any], callback: @escaping (Bool, [UserSession]?) -> Void) {
         if let url = URL(string: "http://localhost:8888/LibTaskWebServices/login.php") {
+            print("un passage")
             var request = URLRequest(url: url)
             
             var components = URLComponents()
@@ -100,6 +101,34 @@ class UserService {
             task?.resume()
         } else {
             callback(false, nil)
+        }
+    }
+    
+    func addUser(parameters: [String: Any]) {
+        if let url = URL(string: "http://localhost:8888/LibTaskWebServices/addUser.php") {
+            var request = URLRequest(url: url)
+            
+            var components = URLComponents()
+            
+            var queryItems = [URLQueryItem]()
+            
+            for (key, value) in parameters {
+                let queryItem = URLQueryItem(name: key, value: String(describing: value))
+                queryItems.append(queryItem)
+            }
+            
+            components.queryItems = queryItems
+            
+            let queryItemData = components.query?.data(using: .utf8)
+            
+            request.httpBody = queryItemData
+            request.httpMethod = "POST"
+            request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+            
+            task?.cancel()
+            
+            task = userSession.dataTask(with: request)
+            task?.resume()
         }
     }
 }
