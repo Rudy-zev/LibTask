@@ -11,7 +11,5 @@ struct TaskUser: Decodable {
     var iduser: String
     var title: String
     var description: String
-    var startingDate: String?
-    var endingDate: String?
 }
 

@@ -19,7 +19,6 @@ class HomeTableViewController: UITableViewController {
     @IBOutlet weak var addUserButton: UIBarButtonItem!
     @IBOutlet weak var addTaskButton: UIBarButtonItem!
     
-    //TODO Remplacer par donner de la bdd 
     var allUser: [User]!
     
     override func loadView() {
@@ -32,6 +31,14 @@ class HomeTableViewController: UITableViewController {
             addUserButton.isEnabled = true
             addTaskButton.isEnabled = true
         }
+    }
+    
+    @IBAction func tapAddUserButton(_ sender: Any) {
+        performSegue(withIdentifier: "addUserSegue", sender: self)
+    }
+    
+    @IBAction func tapAddTaskButton(_ sender: Any) {
+        performSegue(withIdentifier: "addTaskSegue", sender: self)
     }
     
     func getAllTask(idUser: String) {
@@ -68,6 +75,16 @@ class HomeTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        prepareAddTask(segue: segue)
+        prepareTaskScreen(segue: segue)
+    }
+    
+    private func prepareAddTask(segue: UIStoryboardSegue) {
+        guard let addUserVC = segue.destination as? AddTaskViewController else { return }
+        addUserVC.allUser = allUser
+    }
+    
+    private func prepareTaskScreen(segue: UIStoryboardSegue) {
         guard let taskVC = segue.destination as? TaskTableViewController else { return }
         taskVC.task = allTask
     }

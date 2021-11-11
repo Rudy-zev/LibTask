@@ -10,7 +10,7 @@ import UIKit
 class AddUserViewController: UIViewController {
     @IBOutlet weak var lastNametextField: UITextField!
     @IBOutlet weak var firstNameTextField: UITextField!
-    @IBOutlet weak var BirthDatePicker: UIDatePicker!
+    @IBOutlet weak var birthDateTextField: UITextField!
     
     let sendAlert = SendAlert()
     
