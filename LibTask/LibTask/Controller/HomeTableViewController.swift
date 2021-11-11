@@ -8,8 +8,7 @@
 import UIKit
 
 class HomeTableViewController: UITableViewController {
-    var userSelected: String?
-    
+
     var currentUserSession: UserSession!
     
     var taskService = TaskService(taskSession: URLSession(configuration: .default))
@@ -35,8 +34,8 @@ class HomeTableViewController: UITableViewController {
         }
     }
     
-    func getAllTask() {
-        let parameters = ["iduser": userSelected]
+    func getAllTask(idUser: String) {
+        let parameters = ["iduser": idUser]
         
         taskService.getAllTask(parameters: parameters) { (sucess, taskUser) in
             DispatchQueue.main.async {
@@ -65,8 +64,7 @@ class HomeTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        userSelected = allUser[indexPath.row].id
-        getAllTask()
+        getAllTask(idUser: allUser[indexPath.row].id)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -8,10 +8,10 @@
 import Foundation
 
 struct TaskUser: Decodable {
+    var iduser: String
     var title: String
     var description: String
-    var user: String
-    var startingDate: Date?
-    var endingDate: Date?
+    var startingDate: String?
+    var endingDate: String?
 }
 

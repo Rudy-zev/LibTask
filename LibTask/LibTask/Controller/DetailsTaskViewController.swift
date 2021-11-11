@@ -25,7 +25,7 @@ class DetailsTaskViewController: UIViewController {
     
     private func configureTask() {
         titleTask.text = task.title
-        userTask.text = task.user
+        userTask.text = task.iduser
         //TODO Changer de format les date
         startingDate.text = "27/01/2021"
         endingDate.text = "28/01/2021"

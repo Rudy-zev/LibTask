@@ -48,9 +48,9 @@ class TaskService {
                 }
                 if let data = data {
                     do {
-                        let userSession = try JSONDecoder().decode([TaskUser].self, from: data)
-                        print(userSession.count)
-                        callback(true, userSession)
+                        let alltask = try JSONDecoder().decode([TaskUser].self, from: data)
+                        print(alltask.count)
+                        callback(true, alltask)
                     } catch {
                         print(" \(error)")
                         callback(false, nil)
