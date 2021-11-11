@@ -20,7 +20,7 @@ class UserService {
     
     func checkLogin(parameters: [String: Any], callback: @escaping (Bool, [UserSession]?) -> Void) {
         if let url = URL(string: "http://localhost:8888/LibTaskWebServices/login.php") {
-            print("un passage")
+            
             var request = URLRequest(url: url)
             
             var components = URLComponents()
