@@ -19,6 +19,11 @@ class AddTaskViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var userPickerView: UIPickerView!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        idUserSelected = allUser[0].id
+    }
+    
     @IBAction func tapCreationTaskButton(_ sender: Any) {
         guard titleTextField.text! != "" && descriptionTextField.text! != "" else {
             self.present(self.sendAlert.alert(message: "Données manquantes."), animated: true)
